@@ -1,5 +1,6 @@
 package com.example.pockotlin
 
+import android.nfc.NfcAdapter
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 
 class nfc : Fragment() {
+
+    private var nfcAdapter: NfcAdapter? = null
 
     companion object {
         fun newInstance() = nfc()
@@ -19,6 +22,9 @@ class nfc : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        this.nfcAdapter = NfcAdapter.getDefaultAdapter(requireContext())?.let { it }
+
         return inflater.inflate(R.layout.fragment_nfc, container, false)
     }
 
