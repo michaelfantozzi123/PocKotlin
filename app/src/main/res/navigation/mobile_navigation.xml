@@ -9,17 +9,67 @@
         android:id="@+id/nav_home"
         android:name="com.example.pockotlin.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_chart"
+            app:destination="@id/chart" />
+        <action
+            android:id="@+id/action_nav_home_to_qrScanner"
+            app:destination="@id/qrScanner" />
+        <action
+            android:id="@+id/action_nav_home_to_bonus"
+            app:destination="@id/bonus" />
+        <action
+            android:id="@+id/action_nav_home_to_nfc"
+            app:destination="@id/nfc" />
+        <action
+            android:id="@+id/action_nav_home_to_biometrics"
+            app:destination="@id/biometrics" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.pockotlin.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/chart"
+        android:name="com.example.pockotlin.Chart"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" >
+        <action
+            android:id="@+id/action_chart_to_nav_home2"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.pockotlin.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/biometrics"
+        android:name="com.example.pockotlin.Biometrics"
+        android:label="fragment_biometrics"
+        tools:layout="@layout/fragment_biometrics" >
+        <action
+            android:id="@+id/action_biometrics_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nfc"
+        android:name="com.example.pockotlin.nfc"
+        android:label="fragment_nfc"
+        tools:layout="@layout/fragment_nfc" >
+        <action
+            android:id="@+id/action_nfc_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/bonus"
+        android:name="com.example.pockotlin.Bonus"
+        android:label="fragment_bonus"
+        tools:layout="@layout/fragment_bonus" >
+        <action
+            android:id="@+id/action_bonus_to_nav_home2"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrScanner"
+        android:name="com.example.pockotlin.QrScanner"
+        android:label="fragment_qr_scanner"
+        tools:layout="@layout/fragment_qr_scanner" >
+        <action
+            android:id="@+id/action_qrScanner_to_nav_home2"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>

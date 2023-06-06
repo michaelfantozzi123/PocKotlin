@@ -10,4 +10,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="Chart">Chart</string>
+    <string name="Home">Home</string>
+    <string name="NFC">NFC</string>
+    <string name="Biometrics">Biometrics</string>
+    <string name="QR_Scanner">QR Scanner</string>
+    <string name="Bonus">Bonus</string>
 </resources>
