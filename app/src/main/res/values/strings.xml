@@ -16,4 +16,6 @@
     <string name="Biometrics">Biometrics</string>
     <string name="QR_Scanner">QR Scanner</string>
     <string name="Bonus">Bonus</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
